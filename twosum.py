@@ -1,12 +1,11 @@
 # we have to find the sum of two list indices that gives t
-num=[3,2,4]
-t=6
-for i in range(2) :
-    for j in range (3):
-        if i==j:
-            continue
-        q=num[i]+num[j]
-        if q==t:
-            print(i,j)
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i in range (len(nums)-1):
+            for j in range (i+1,len(nums)):
+                if nums[i] + nums[j]==target:
+                    return ([i,j])
+        
+        
         
         
